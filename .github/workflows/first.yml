@@ -1,7 +1,8 @@
+name: demo purpose
+on: workflow_dispatch
 jobs:
   example:
     runs-on: self-hosted
-
     steps:
       - name: Generate value
         run: |
