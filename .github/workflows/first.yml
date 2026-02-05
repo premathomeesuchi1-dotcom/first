@@ -1,0 +1,13 @@
+jobs:
+  example:
+    runs-on: self-hosted
+
+    steps:
+      - name: Generate value
+        run: |
+          MY_VALUE=$(echo "hello-from-selfhosted")
+          echo "MY_VALUE=$MY_VALUE" >> $GITHUB_ENV
+
+      - name: Use stored value
+        run: |
+          echo "Stored value is: $MY_VALUE"
